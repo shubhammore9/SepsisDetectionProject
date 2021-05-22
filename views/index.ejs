@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sepsis Prediction System </title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" >
+        <link rel="stylesheet" href="css/font-awesome.min.css" media="screen" >
+        <link rel="stylesheet" type="text/css" href="js/DataTables/datatables.min.css"/>
+        <link rel="stylesheet" href="css/main.css" media="screen" >
+        <link rel="stylesheet" href="css/form-content.css" media="screen" >
+        <script src="js/modernizr/modernizr.min.js"></script>
+        <!-- <style>
+             
+             body{
+                 background-color:white;
+                 width:auto;
+                 height:auto;
+                
+             } 
+             .intro-page{
+                margin-left: 203px;
+               margin-right: 203px;
+               
+             }
+             .intro-page h2{
+                font-size: 25px;
+               font-weight: 900;
+               color: #499bea;
+             }
+             .intro-page p
+             {
+                color: #071c55;
+                font-size: 16px;
+                font-weight: 800;
+             }
+
+             .flex-p {
+                display: flex;
+
+flex-wrap: wrap;
+
+align-items: center;
+
+}
+              
+             .flex-p .image-p{
+                flex-basis: 30%;
+    max-width: 30%;
+    padding: 10px;
+             }
+.flex-p .content-p {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 21px;
+    
+}
+.flex-p .content-p li{
+     
+
+}
+
+
+
+             .intro-page a{
+     background-color: #25dfce;
+    font-size: 60x;
+    font-weight: 900;
+    color: #131001;
+
+}     
+ 
+.intro-page button{
+    background-color: #25dfce;
+   
+    float: right;
+   
+    font-weight:900;
+
+
+}  
+
+.intro-page button{
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#499bea+33,207ce5+67 */
+background: #499bea; /* Old browsers */
+background: -moz-linear-gradient(top,  #499bea 33%, #207ce5 67%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #499bea 33%,#207ce5 67%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #499bea 33%,#207ce5 67%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5',GradientType=0 ); /* IE6-9 */
+
+   
+    float: right;
+    border-radius: 25px;
+    transition:0.5s;
+   color:white;
+
+}  
+.intro-page button:hover{
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#29b8e5+50,bce0ee+90 */
+background: #29b8e5; /* Old browsers */
+background: -moz-linear-gradient(top,  #29b8e5 50%, #bce0ee 90%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #29b8e5 50%,#bce0ee 90%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #29b8e5 50%,#bce0ee 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29b8e5', endColorstr='#bce0ee',GradientType=0 ); /* IE6-9 */
+
+   color:white;
+    border-radius: 25px;
+
+
+}
+.flex-p-inside{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    position:relative;
+
+}
+.flex-p-1{
+    flex-basis: 10%;
+    max-width: 7%;
+    position: absolute;
+    top: -42px;
+
+    
+}
+.flex-p-2{
+    flex-basis: 100%;
+    max-width: 100%;
+}
+li{
+    list-style-type:none;
+    display:block;
+}
+.flex-p-1 li a button i {
+    color:white;
+}
+
+</style> -->
+    </head>
+    <body >
+      
+
+            <!-- ========== TOP NAVBAR ========== -->
+  
+            <nav class="navbar top-navbar bg-white box-shadow">
+            	<div class="container-fluid">
+                    <div class="row">
+                        <div class="navbar-header no-padding">
+                			<a class="navbar-brand" href="#">
+                			    Sepsis Dashboard 
+                			</a>
+                            <span class="small-nav-handle hidden-sm hidden-xs"></span>
+                			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                				<span class="sr-only">Toggle navigation</span>
+                			
+                			</button> 
+                            <button type="button" class="navbar-toggle mobile-nav-toggle" >
+                				
+                			</button>
+                		</div>
+                        <!-- /.navbar-header -->
+
+                		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+                			<ul class="nav navbar-nav" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+
+
+                       
+                				<li class="hidden-xs hidden-xs"><!-- <a href="#">My Tasks</a> --></li>
+                               
+                			</ul>
+                            <!-- /.nav navbar-nav -->
+
+                			<ul class="nav navbar-nav navbar-right" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                             
+                				
+							<li><a href="/" class="color-danger text-center"onclick="return confirm('Are you sure you want Logging out the system?');">Logout</a></li>
+                					
+                		
+                            
+                			</ul> 
+                            <!-- /.nav navbar-nav navbar-right -->
+                		</div>
+                		<!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.row -->
+            	</div>
+            	<!-- /.container-fluid -->
+            </nav>
+        </div>
+
+        <div class="intro-page" >
+
+           <div class="flex-p">
+       <div class="content-p"> 
+
+
+    <form class="form-horizontal" action="\result" method="post">
+       <h2> Please fill all the possible fileds below that apply to you </h2>
+           <p>Enter Proper Values. </p>
+
+    <table id="example"  cellspacing="2" width="100%">
+                                      
+  
+    <tbody>
+
+<tr>
+    <td class="result-color1">HR Heart Rate  </td>
+    <td class="result-color1"><input  type="number" name="heartrate" value="85" required> </td>
+</tr>
+<tr>
+    <td class="result-color1"> O2Sat Pulse oximetery(%) </td>
+    <td class="result-color1"><input type="number" name="o2sat" value="95" required></td>
+</tr>
+<tr>
+    <td class="result-color1"> Temperature </td>
+    <td class="result-color1"><input type="number" name="temp" value="97" step="0.001" required></td>
+</tr>
+<tr>
+    <td class="result-color1"> SBP Systolic BP (mm Hg) </td>
+    <td class="result-color1"><input type="number" name="sbpbp" value="95"></td>
+</tr>
+<tr>
+    <td class="result-color1">MAP Mean arterial pressure  </td>
+    <td class="result-color1"><input type="number" name="map" value="85" required> </td>
+</tr>
+<tr>
+    <td class="result-color1">DBP Diastolic BP (mmHg)  </td>
+    <td class="result-color1"><input type="number" name="dbp" value="85" required> </td>
+</tr>
+<tr>
+    <td class="result-color1">Respiration Rate (Breaths/Minute)  </td>
+    <td class="result-color1"><input type="number" name="resp" value="85" step="0.001" required> </td>
+</tr>
+<tr>
+    <td class="result-color1">WBC count </td>
+    <td class="result-color1"><input type="number" name="wbc" value="85" required> </td>
+</tr>
+<tr>
+    <td class="result-color1">BUN Blood urea nitrogen (mg/dL)  </td>
+    <td class="result-color1"><input type="number" name="bun" value="85" required> </td>
+</tr>
+<tr>
+    <td class="result-color1">Hgb Hemoglobin (g/dL)  </td>
+    <td class="result-color1"><input type="number" name="hgb" value="85" step="0.001" required> </td>
+</tr>
+<tr>
+    <td class="result-color1">FiO2 Fraction inspired oxyg (%) </td>
+    <td class="result-color1"><input type="number" name="fio2" value="0" step="0.001" required> </td>
+</tr>
+<tr>
+    <td class="result-color1">pH  </td>
+    <td class="result-color1"><input type="number" name="ph" value="85" required> </td>
+</tr>
+<tr>
+    <td class="result-color1">Age  </td>
+    <td class="result-color1"><input type="number" name="age" value="18" min="1" max="110" required> </td>
+</tr>
+<tr>
+    <td class="result-color1">SaO2 Oxyg saturation from arterial blood (%)  </td>
+    <td class="result-color1"><input type="number" name="sao2" value="85" step="0.001" required> </td>
+</tr>
+<tr>
+    <td class="result-color1">Gender (Male =1/ Female =0)  </td>
+    <td class="result-color1"><input type="number" name="gender" value="1" required> </td>
+</tr>
+<tr>
+    <td class="result-color1">Hospital Admit Time  </td>
+    <td class="result-color1"><input type="number" name="hosptime" step="0.001" value="85" > </td>
+</tr>                                                  
+<tr>
+    <td class="result-color1">Calcium (mg/dL)  </td>
+    <td class="result-color1"><input type="number" name="calc" value="85" step="0.001" required> </td>
+</tr>                                               
+<tr>
+    <td class="result-color1"> Chloride (mmol/L)  </td>
+    <td class="result-color1"><input type="number" name="chloride" step="0.001" value="85" required> </td>
+</tr>                                               </tbody>
+<tr>
+    <td class="result-color1">Unit 1   </td>
+    <td class="result-color1"><input type="number" name="unit1" value="85" required> </td>
+</tr> 
+<tr>
+    <td class="result-color1">Unit 2 </td>
+    <td class="result-color1"><input type="number" name="unit2" value="85" required> </td>
+</tr>                                           
+<tr>
+    <td class="result-color1">Glucose serum (mg/dL)  </td>
+    <td class="result-color1"><input type="number" name="gluc" value="85" step="0.001" required> </td>
+</tr> 
+<tr>
+    <td class="result-color1">ICULOS  </td>
+    <td class="result-color1"><input type="number" name="iculos" value="85" required> </td>
+</tr> 
+                                          <div class="flex-p-inside">
+
+<div class="flex-p-2">
+<li><button type="submit" name="submit" >SUBMIT</button></li> 
+
+</div>
+</div>
+      
+     </form>
+
+
+     <div class="flex-p-inside">
+     <div class="flex-p-1">
+     <li><a href="\" ><button><<</button></li>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+        <!-- /.main-wrapper -->
+        <script src="js/jquery-2.2.4.min.js"></script>
+
+        <script src="js/main.js"></script>
+        <script>
+            $(function($) {
+                $(".js-states").select2();
+                $(".js-states-limit").select2({
+                    maximumSelectionLength: 2
+                });
+                $(".js-states-hide").select2({
+                    minimumResultsForSearch: Infinity
+                });
+            });
+        </script>
+    </body>
+</html>

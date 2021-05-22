@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+    <head>  
+        <title>Sepsis Prediction System </title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" >
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/login.css">
+
+ 
+        <style>
+
+button{
+    cursor:pointer;
+}
+
+</style>
+
+    </head>
+    <body>
+
+
+        <section class="container content">
+            <div class="hompage">
+            
+            <h2>Early Detection & Medication Recommendation For Sepsis </h2>
+            <p>Check your symptoms and find out what is severity and get recommended medical treatment based on it.
+            </p>
+            <ul>
+            
+        <!--<button  class="btn btn-primary btn-lg"><a style="color: white;" href="#service_part">Login</a></button>
+        --><li><button class="homepage-button"onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><a>Login</a></button></li>
+          <!-- <li> <button class="homepage-button"><a href="intro.php">Start Checkups</a></button></li>
+          -->
+            </ul>
+      </div>
+        </section>
+        
+
+        
+
+<div id="id01" class="modal">
+  
+<form class="modal-content animate"  method="post" action="login">
+
+
+  <div class="container-login">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" name="uname" class="form-control" id="inputEmail3" placeholder="UserName" required>
+
+    <label for="pass"><b>Password</b></label>
+    <input type="password" name="pass" class="form-control" id="inputPassword3" placeholder="Password"required>
+
+    <label>
+    <button type="submit" name="login" class="button-login">Sign in<span class="btn-label btn-label-right"></span></button>
+    </label>
+  </div>
+
+  <div class="container-login" style="background-color:#f1f1f1">
+  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    <!-- <span class="psw">Forgot <a href="change-password.php">password?</a></span> -->
+  </div>
+</form>
+</div>
+
+ <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script> 
+
+    </body>
+</html>
